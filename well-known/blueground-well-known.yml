@@ -1,0 +1,59 @@
+generated: '2026-07-31'
+method: probed
+note: >-
+  Every /.well-known/ path below was probed on 2026-07-31 and returned no document.
+  partner-network.theblueground.com is a Next.js single-page app whose catch-all route
+  answers HTTP 200 with the same 39KB HTML shell for every /.well-known/* path — those
+  are recorded as false positives (html_shell: true), not hits. No WellKnown, SecurityTxt,
+  APICatalog or AgentCard pointer is wired in apis.yml because no document was found.
+hosts:
+- host: https://www.theblueground.com
+  documents:
+  - {path: /.well-known/security.txt, status: 404}
+  - {path: /.well-known/openid-configuration, status: 404}
+  - {path: /.well-known/oauth-authorization-server, status: 404}
+  - {path: /.well-known/oauth-protected-resource, status: 404}
+  - {path: /.well-known/api-catalog, status: 404}
+  - {path: /.well-known/ai-plugin.json, status: 404}
+  - {path: /.well-known/agent-card.json, status: 404}
+  - {path: /.well-known/agent.json, status: 404}
+- host: https://theblueground.com
+  documents:
+  - {path: /.well-known/security.txt, status: 404}
+  - {path: /.well-known/openid-configuration, status: 404}
+  - {path: /.well-known/oauth-authorization-server, status: 404}
+  - {path: /.well-known/oauth-protected-resource, status: 404}
+  - {path: /.well-known/api-catalog, status: 404}
+  - {path: /.well-known/ai-plugin.json, status: 404}
+  - {path: /.well-known/agent-card.json, status: 404}
+  - {path: /.well-known/agent.json, status: 404}
+- host: https://api.theblueground.com
+  note: Live host (Go service) that answers `404 page not found` as text/plain on every path probed.
+  documents:
+  - {path: /.well-known/security.txt, status: 404}
+  - {path: /.well-known/openid-configuration, status: 404}
+  - {path: /.well-known/oauth-authorization-server, status: 404}
+  - {path: /.well-known/oauth-protected-resource, status: 404}
+  - {path: /.well-known/api-catalog, status: 404}
+  - {path: /.well-known/ai-plugin.json, status: 404}
+  - {path: /.well-known/agent-card.json, status: 404}
+  - {path: /.well-known/agent.json, status: 404}
+- host: https://partners.theblueground.com
+  documents:
+  - {path: /.well-known/security.txt, status: 404}
+  - {path: /.well-known/agent-card.json, status: 404}
+  - {path: /.well-known/agent.json, status: 404}
+- host: https://partner-network.theblueground.com
+  note: SPA catch-all — 200 with an HTML shell on every path; rejected as a false positive.
+  documents:
+  - {path: /.well-known/security.txt, status: 200, html_shell: true, hit: false}
+  - {path: /.well-known/openid-configuration, status: 200, html_shell: true, hit: false}
+  - {path: /.well-known/oauth-authorization-server, status: 200, html_shell: true, hit: false}
+  - {path: /.well-known/oauth-protected-resource, status: 200, html_shell: true, hit: false}
+  - {path: /.well-known/api-catalog, status: 200, html_shell: true, hit: false}
+  - {path: /.well-known/ai-plugin.json, status: 200, html_shell: true, hit: false}
+  - {path: /.well-known/agent-card.json, status: 200, html_shell: true, hit: false}
+  - {path: /.well-known/agent.json, status: 200, html_shell: true, hit: false}
+x-evidence:
+  fetched: '2026-07-31'
+  tool: curl -sIL

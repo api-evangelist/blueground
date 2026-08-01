@@ -1,17 +1,38 @@
 aid: blueground
 name: Blueground
-description: 'Blueground is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: 'Blueground is a global proptech company that leases, furnishes and operates
+  move-in-ready apartments for stays of a month or longer, running thousands of units
+  across cities in North America, Europe, the Middle East, Asia and Latin America.
+  It operates an end-to-end technology stack: a consumer booking site and iOS/Android
+  guest apps, an internal property, pricing and operations platform, and the Blueground
+  Partner Network — an invite-only marketplace where third-party furnished-rental operators
+  list supply and connect inventory through PMS and channel-manager integrations (Avantio,
+  NextPax, Rentals United, Hostify, Hostfully, SiteMinder, Cloudbeds, Airbnb). Blueground
+  publishes no public developer portal, API documentation or machine-readable contract:
+  partner connectivity is brokered through channel-manager partners rather than a self-serve
+  API. Its engineering organization does maintain a real open-source footprint on GitHub
+  (bluegroundltd), with libraries released to Maven Central and npm, and the main website
+  publishes an llms.txt.'
 url: https://raw.githubusercontent.com/api-evangelist/blueground/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
+x-harvest-source-url: https://forgeglobal.com/blueground_stock/
 x-tier: stub
 x-tier-reason: harvest
 specificationVersion: '0.20'
 created: '2026-07-31'
 modified: '2026-07-31'
+image: https://cdn.theblueground.com/website/static/img/logo-wordmark-blue-main.22765a5ac859b1b91802.svg
 tags:
 - Company
+- Real Estate
+- Proptech
+- Travel
+- Hospitality
+- Furnished Rentals
+- Property Management
+- Corporate Housing
+- Marketplace
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +40,42 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/blueground-domain-security.yml
 - type: Website
-  url: https://forgeglobal.com/blueground_stock/
+  url: https://www.theblueground.com/
+- type: Blog
+  url: https://www.theblueground.com/blog
+- type: GitHubOrganization
+  url: https://github.com/bluegroundltd
+- type: Support
+  url: https://www.theblueground.com/contact
+- type: SignUp
+  url: https://www.theblueground.com/signup
+- type: Login
+  url: https://www.theblueground.com/login
+- type: Pricing
+  url: https://www.theblueground.com/apartments-pricing
+- type: TermsOfService
+  url: https://www.theblueground.com/terms
+- type: PrivacyPolicy
+  url: https://www.theblueground.com/privacy
+- type: About
+  url: https://www.theblueground.com/about
+- type: Press
+  url: https://www.theblueground.com/press
+- type: Careers
+  url: https://www.theblueground.com/careers
+- type: Partners
+  url: https://partner-network.theblueground.com/
+- type: LLMsTxt
+  url: llms/blueground-llms.txt
+- type: Packages
+  url: packages/blueground-packages.yml
+- type: Integrations
+  url: integrations/_index.yml
+x-enrichment:
+  date: '2026-07-31'
+  status: enriched
+  artifacts_added: 5
+  pass: local-v1

@@ -1,0 +1,146 @@
+generated: '2026-07-31'
+method: searched
+source: https://github.com/bluegroundltd
+note: >-
+  Blueground publishes no public API and therefore ships no API client SDKs. The
+  packages below are first-party OPEN-SOURCE ENGINEERING LIBRARIES released by the
+  Blueground engineering organization (GitHub org bluegroundltd) to Maven Central
+  (group io.github.bluegroundltd) and npm (scope @blueground). They are developer
+  tooling — test fixtures, an outbox implementation, logging/diagnostics, JSON Schema
+  generation — not clients for a Blueground API. No `SDKs` pointer is wired in
+  apis.yml because none of these is an API client library.
+packages:
+- language: kotlin
+  registry: maven-central
+  name: io.github.bluegroundltd:kfactory
+  version: 1.0.0
+  url: https://central.sonatype.com/artifact/io.github.bluegroundltd/kfactory
+  install: implementation("io.github.bluegroundltd:kfactory:1.0.0")
+  repository: https://github.com/bluegroundltd/kfactory
+  description: Fixture factory in Kotlin.
+  official: true
+  kind: engineering-library
+- language: kotlin
+  registry: maven-central
+  name: io.github.bluegroundltd:fixtures
+  version: 1.0.8-alpha03
+  url: https://central.sonatype.com/artifact/io.github.bluegroundltd/fixtures
+  install: implementation("io.github.bluegroundltd:fixtures:1.0.7")
+  repository: https://github.com/bluegroundltd/fixtures
+  description: Auto-generate functions to instantiate data classes during testing.
+  official: true
+  kind: engineering-library
+- language: kotlin
+  registry: maven-central
+  name: io.github.bluegroundltd:fixtures-annotations
+  version: 2.0.0-rc03
+  url: https://central.sonatype.com/artifact/io.github.bluegroundltd/fixtures-annotations
+  repository: https://github.com/bluegroundltd/fixtures
+  description: Annotation module for the fixtures test-data generator.
+  official: true
+  kind: engineering-library
+- language: kotlin
+  registry: maven-central
+  name: io.github.bluegroundltd:fixtures-kotlin
+  version: 2.0.0-rc03
+  url: https://central.sonatype.com/artifact/io.github.bluegroundltd/fixtures-kotlin
+  repository: https://github.com/bluegroundltd/fixtures
+  description: Kotlin target for the fixtures test-data generator.
+  official: true
+  kind: engineering-library
+- language: groovy
+  registry: maven-central
+  name: io.github.bluegroundltd:fixtures-groovy
+  version: 2.0.0-rc03
+  url: https://central.sonatype.com/artifact/io.github.bluegroundltd/fixtures-groovy
+  repository: https://github.com/bluegroundltd/fixtures
+  description: Groovy target for the fixtures test-data generator.
+  official: true
+  kind: engineering-library
+- language: kotlin
+  registry: maven-central
+  name: io.github.bluegroundltd:transactional-outbox-core
+  version: 2.3.2
+  url: https://central.sonatype.com/artifact/io.github.bluegroundltd/transactional-outbox-core
+  repository: https://github.com/bluegroundltd/transactional-outbox
+  description: Outbox pattern library implementation (core).
+  official: true
+  kind: engineering-library
+- language: kotlin
+  registry: maven-central
+  name: io.github.bluegroundltd:transactional-outbox-spring
+  version: 0.0.2
+  url: https://central.sonatype.com/artifact/io.github.bluegroundltd/transactional-outbox-spring
+  repository: https://github.com/bluegroundltd/transactional-outbox
+  description: Spring + Postgres reference implementation of the transactional outbox.
+  official: true
+  kind: engineering-library
+- language: kotlin
+  registry: maven-central
+  name: io.github.bluegroundltd:enum-convertible
+  version: 1.0.4-aplha02
+  url: https://central.sonatype.com/artifact/io.github.bluegroundltd/enum-convertible
+  install: implementation("io.github.bluegroundltd:enum-convertible:1.0.3")
+  repository: https://github.com/bluegroundltd/enum-convertible
+  description: Auto-generate mappers for enums.
+  official: true
+  kind: engineering-library
+- language: kotlin
+  registry: maven-central
+  name: io.github.bluegroundltd:enum-convertible-annotations
+  version: 1.0.4-aplha02
+  url: https://central.sonatype.com/artifact/io.github.bluegroundltd/enum-convertible-annotations
+  repository: https://github.com/bluegroundltd/enum-convertible
+  description: Annotation module for enum-convertible.
+  official: true
+  kind: engineering-library
+- language: kotlin
+  registry: maven-central
+  name: io.github.bluegroundltd:generate-schema-annotation
+  version: 1.0.0
+  url: https://central.sonatype.com/artifact/io.github.bluegroundltd/generate-schema-annotation
+  install: implementation("io.github.bluegroundltd:generate-schema-annotation:1.0.0")
+  repository: https://github.com/bluegroundltd/json-schema-jvm
+  description: Generate JSON Schema for @GenerateJsonSchema annotated JVM classes.
+  official: true
+  kind: engineering-library
+- language: javascript
+  registry: npm
+  name: '@blueground/async-mdc'
+  version: 1.0.2
+  url: https://www.npmjs.com/package/@blueground/async-mdc
+  install: npm install @blueground/async-mdc
+  repository: https://github.com/bluegroundltd/async-mdc
+  description: Async-hooks based Mapped Diagnostic Context (MDC) for Node.js.
+  official: true
+  kind: engineering-library
+- language: javascript
+  registry: npm
+  name: '@blueground/jest-testcontainers'
+  version: 3.0.6
+  url: https://www.npmjs.com/package/@blueground/jest-testcontainers
+  install: npm install --save-dev @blueground/jest-testcontainers
+  repository: https://github.com/bluegroundltd/jest-testcontainers
+  description: Jest preset for running Docker containers alongside tests.
+  official: true
+  kind: engineering-library
+registries_probed:
+- registry: maven-central
+  query: g:io.github.bluegroundltd
+  results: 10
+- registry: npm
+  query: blueground
+  results: 2
+- registry: pypi
+  query: blueground
+  results: 0
+- registry: crates.io
+  query: rustic-witcher
+  results: 0
+  note: The rustic-witcher Rust toolkit is published as source on GitHub only, not to crates.io.
+x-evidence:
+  fetched: '2026-07-31'
+  sources:
+  - https://search.maven.org/solrsearch/select?q=g:%22io.github.bluegroundltd%22
+  - https://registry.npmjs.org/-/v1/search?text=blueground
+  - https://api.github.com/orgs/bluegroundltd

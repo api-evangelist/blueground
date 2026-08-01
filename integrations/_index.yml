@@ -1,0 +1,109 @@
+generated: '2026-07-31'
+method: searched
+source: https://partner-network.theblueground.com/
+note: >-
+  Listing-only catalog of the PMS / channel-manager connections Blueground advertises
+  on the Blueground Partner Network ("Connect via your PMS"). Blueground itself publishes
+  no OpenAPI and no public API documentation, so NO Arazzo workflow can be authored for
+  any of these — every entry is `arazzo: null` with `status: pending-provider-spec`.
+  The connection is brokered by the partner platform: an operator syncs rates and
+  availability from their PMS/channel manager into the Blueground Partner Network.
+  Partner-side specs exist in the catalog for some of these (all/cloudbeds, all/airbnb,
+  all/guesty) but the Blueground side of the workflow has no verifiable operationIds,
+  so nothing is modelled rather than invented.
+integrations:
+- slug: blueground-siteminder
+  label: Connect via SiteMinder
+  partner: SiteMinder
+  category: channel-manager
+  use_case: Hotels and operators on SiteMinder push rates and availability to the Blueground
+    Partner Network through SiteMinder's native Blueground channel connection.
+  partner_url: https://www.siteminder.com/partner/blueground/
+  catalog_repo: all/siteminder
+  arazzo: null
+  status: pending-provider-spec
+- slug: blueground-rentals-united
+  label: Connect via Rentals United
+  partner: Rentals United
+  category: channel-manager
+  use_case: Rentals United distributes mid-term furnished inventory to Blueground and
+    automates pricing, availability and distribution across connected channels.
+  partner_url: https://rentalsunited.com/vacation-rental-services/blueground/
+  catalog_repo: null
+  arazzo: null
+  status: pending-provider-spec
+- slug: blueground-nextpax
+  label: Connect via NextPax
+  partner: NextPax
+  category: channel-manager
+  use_case: NextPax channel management connects operator inventory to the Blueground
+    Partner Network.
+  catalog_repo: null
+  arazzo: null
+  status: pending-provider-spec
+- slug: blueground-avantio
+  label: Connect via Avantio
+  partner: Avantio
+  category: pms
+  use_case: Avantio PMS users list supply into the Blueground Partner Network from
+    their existing property management system.
+  catalog_repo: null
+  arazzo: null
+  status: pending-provider-spec
+- slug: blueground-guesty
+  label: Connect via Guesty
+  partner: Guesty
+  category: pms
+  use_case: Guesty-managed properties connect to the Blueground Partner Network for
+    30+ day stays.
+  catalog_repo: all/guesty
+  arazzo: null
+  status: pending-provider-spec
+- slug: blueground-hostaway-hostify
+  label: Connect via Hostify
+  partner: Hostify
+  category: pms
+  use_case: Hostify PMS inventory syncs to the Blueground Partner Network.
+  catalog_repo: null
+  arazzo: null
+  status: pending-provider-spec
+- slug: blueground-hostfully
+  label: Connect via Hostfully
+  partner: Hostfully
+  category: pms
+  use_case: Hostfully property management inventory syncs to the Blueground Partner
+    Network.
+  catalog_repo: all/hostfully
+  arazzo: null
+  status: pending-provider-spec
+- slug: blueground-cloudbeds
+  label: Connect via Cloudbeds
+  partner: Cloudbeds
+  category: pms
+  use_case: Cloudbeds hospitality platform inventory connects to the Blueground Partner
+    Network.
+  catalog_repo: all/cloudbeds
+  arazzo: null
+  status: pending-provider-spec
+- slug: blueground-airbnb
+  label: Connect via Airbnb
+  partner: Airbnb
+  category: marketplace
+  use_case: Operators already distributing on Airbnb can route long-stay supply into
+    the Blueground Partner Network.
+  catalog_repo: all/airbnb
+  arazzo: null
+  status: pending-provider-spec
+- slug: blueground-happy-star
+  label: Connect via Happy Star
+  partner: Happy Star
+  category: pms
+  use_case: Happy Star PMS inventory syncs to the Blueground Partner Network.
+  catalog_repo: null
+  arazzo: null
+  status: pending-provider-spec
+x-evidence:
+  fetched: '2026-07-31'
+  url: https://partner-network.theblueground.com/
+  http_status: 200
+  method: partner logos and "Connect via <partner>" strings extracted from the rendered page

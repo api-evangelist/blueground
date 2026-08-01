@@ -1,0 +1,56 @@
+generated: '2026-07-31'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml hosts
+note: >-
+  Baseline written by 0-working/probe-domain-security.py, then extended by hand with the
+  additional Blueground hosts probed during contract discovery. The script reported
+  `spf: false` because theblueground.com publishes its SPF policy as a MULTI-STRING TXT
+  record; `dig +short TXT theblueground.com` confirms `v=spf1 include:eu.transmail.net
+  include:mail.zendesk.com include:_spf.google.com include:_spf.salesforce.com
+  include:aspmx.pardot.com ... ~all`, so spf is recorded true here.
+hosts:
+- host: www.theblueground.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Oct 11 14:42:19 2026 GMT
+  hsts: true
+  hsts_max_age: 31536000
+- host: api.theblueground.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Oct 11 14:42:19 2026 GMT
+  hsts: false
+  http_status: 404
+  note: Live Go service; answers `404 page not found` (text/plain) on every path probed.
+- host: partner-network.theblueground.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Oct 11 14:42:19 2026 GMT
+  hsts: false
+  http_status: 200
+- host: partners.theblueground.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Aug 14 15:14:09 2026 GMT
+  hsts: true
+  hsts_max_age: 31536000
+  hsts_include_subdomains: true
+  http_status: 200
+- host: cdn.theblueground.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Nov 18 23:59:59 2026 GMT
+  hsts: false
+  http_status: 403
+domains:
+- domain: theblueground.com
+  dnssec: true
+  caa: []
+  spf: true
+  spf_policy: '~all'
+  dmarc: true
+  dmarc_policy: reject
+  dmarc_rua: mailto:dmarc-reports@theblueground.com
+x-evidence:
+  fetched: '2026-07-31'
+  tools: [dig, openssl s_client, curl]
