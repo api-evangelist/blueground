@@ -19,7 +19,7 @@ x-source: harvest:secondary-market
 x-harvest-source-url: https://forgeglobal.com/blueground_stock/
 x-tier: stub
 x-tier-reason: harvest
-specificationVersion: '0.20'
+specificationVersion: '0.23'
 created: '2026-07-31'
 modified: '2026-07-31'
 image: https://cdn.theblueground.com/website/static/img/logo-wordmark-blue-main.22765a5ac859b1b91802.svg
