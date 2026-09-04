@@ -30,6 +30,18 @@ deliveryModel:
   - pricing
   generated: '2026-08-28'
   method: derived
+accessModel:
+  pricing: unknown
+  onboarding: approval
+  trial: false
+  try_now: false
+  public: false
+  label: Requires approval
+  confidence: low
+  source:
+  - security
+  generated: '2026-09-02'
+  method: derived
 specificationVersion: '0.23'
 created: '2026-07-31'
 modified: '2026-07-31'
