@@ -1,6 +1,7 @@
 generated: '2026-10-14'
 method: searched
 checked:
+- guesty/integrations/guesty-integration-edges.yml
 - hostaway/integrations/hostaway-integration-edges.yml
 - https://integrations-api.siteminder.com/public/partners/all?lang=en
 source: https://integrations-api.siteminder.com/public/partners/all?lang=en
@@ -18,6 +19,22 @@ edges:
   detected: '2026-10-14'
   categories:
   - ota
+- partner_name: Guesty (own)
+  partner: guesty
+  partner_match: mirror
+  mirror_match: domain
+  type: marketplace
+  relationship: platform-app
+  direction: third-party
+  channel: partner-built
+  marketplace: own
+  evidence: https://www.guesty.com/marketplace-items/blueground/
+  mirror_of: guesty/integrations/guesty-integration-edges.yml
+  apps:
+  - Blueground
+  listing_count: 1
+  detected: '2026-10-14'
+  detected_by: mirror-platform-listings.py
 - partner_name: Hostaway (own)
   partner: hostaway
   partner_match: mirror
