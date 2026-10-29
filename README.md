@@ -64,53 +64,86 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Blueground is a global proptech company that leases, furnishes and operates move-in-ready
-apartments for stays of a month or longer, across cities in North America, Europe, the Middle
-East, Asia and Latin America. It runs a consumer booking site and guest mobile apps, an internal
-property/pricing/operations platform, and the **Blueground Partner Network** — an invite-only
-marketplace where third-party furnished-rental operators list supply.
+Blueground is a global proptech company that leases, furnishes and operates move-in-ready apartments for stays of a month or longer, running thousands of units across cities in North America, Europe, the Middle East, Asia and Latin America. It operates an end-to-end technology stack: a consumer booking site and iOS/Android guest apps, an internal property, pricing and operations platform, and the Blueground Partner Network — an invite-only marketplace where third-party furnished-rental operators list supply and connect inventory through PMS and channel-manager integrations (Avantio, NextPax, Rentals United, Hostify, Hostfully, SiteMinder, Cloudbeds, Airbnb). Blueground publishes no public developer portal, API documentation or machine-readable contract: partner connectivity is brokered through channel-manager partners rather than a self-serve API. Its engineering organization does maintain a real open-source footprint on GitHub (bluegroundltd), with libraries released to Maven Central and npm, and the main website publishes an llms.txt.
 
-- Website — https://www.theblueground.com/
-- Partner Network — https://partner-network.theblueground.com/
-- GitHub — https://github.com/bluegroundltd
-- Harvest source (secondary market) — https://forgeglobal.com/blueground_stock/
+**Areas:** Company · Real Estate · PropTech · Travel · Hospitality · Furnished Rentals · Property Management · Corporate Housing · Marketplace
 
-## API surface
+## Blueground on APIs.io
 
-**Blueground publishes no public API, developer portal, or machine-readable contract.**
-Contract discovery on 2026-07-31 probed `theblueground.com`, `www.theblueground.com`,
-`api.theblueground.com`, `docs.theblueground.com`, `partners.theblueground.com` and
-`partner-network.theblueground.com` for `/openapi.json|.yaml`, `/swagger.json`,
-`/v1/openapi.json`, `/api-docs`, `/docs`, `/redoc`, `/v3/api-docs`, `/graphql`, and the
-`/.well-known/` discovery surface (`security.txt`, `openid-configuration`,
-`oauth-authorization-server`, `oauth-protected-resource`, `api-catalog`, `ai-plugin.json`,
-`agent-card.json`, `agent.json`). Every probe missed:
+Everything profiled for Blueground is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/blueground/](https://apis.io/providers/blueground/)** — or go straight to one of the APIs or properties below.
 
-- `api.theblueground.com` is live (Go service, TLS 1.3) but answers `404 page not found` as
-  `text/plain` on every path — an app backend, not a documented public API.
-- `docs.theblueground.com` returns S3 `AccessDenied` (403) on every path.
-- `partner-network.theblueground.com` is a Next.js SPA whose catch-all returns HTTP 200 with the
-  same HTML shell for every path — recorded as a false positive, not a hit.
-- No GraphQL endpoint, no MCP server, no A2A agent card, no AsyncAPI, no security.txt.
+### Published properties
 
-Partner connectivity is brokered through PMS / channel-manager platforms (SiteMinder, Rentals
-United, NextPax, Avantio, Guesty, Hostify, Hostfully, Cloudbeds, Airbnb, Happy Star) rather than
-a self-serve Blueground API — captured in `integrations/_index.yml` as listing-only entries.
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-## Artifacts
+#### Security (1)
 
-| Artifact | File | Method |
-|---|---|---|
-| llms.txt | `llms/blueground-llms.txt` | searched (verbatim, `https://www.theblueground.com/llms.txt`) |
-| Packages | `packages/blueground-packages.yml` | searched (10 Maven Central + 2 npm, first-party OSS) |
-| Well-known | `well-known/blueground-well-known.yml` | probed (all misses recorded) |
-| Integrations | `integrations/_index.yml` | searched (PMS/channel-manager partners) |
-| Domain security | `security/blueground-domain-security.yml` | probed (TLS 1.3, HSTS, DNSSEC, DMARC `p=reject`) |
+Authentication, trust centre, and vulnerability disclosure.
 
-The `bluegroundltd` GitHub org publishes engineering libraries (test fixtures, transactional
-outbox, enum/JSON-schema codegen, logging MDC) to Maven Central under `io.github.bluegroundltd`
-and to npm under `@blueground` — these are internal developer tooling, **not** API client SDKs,
-so no `SDKs` pointer is wired.
+- [Blueground Domain Security](https://apis.io/security/blueground/blueground-domain-security/)
 
-No vulnerability-disclosure program, trust center, status page, or published certifications were
-found (`0-working/probe-security-programs.py` → `vdp=none trust=none`).
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://www.theblueground.com/)
+- [Pricing](https://www.theblueground.com/apartments-pricing)
+- [Sign up](https://www.theblueground.com/signup)
+- [Support](https://www.theblueground.com/contact)
+- [Blog](https://www.theblueground.com/blog)
+- [Terms of service](https://www.theblueground.com/terms)
+- [Privacy policy](https://www.theblueground.com/privacy)
+- [GitHub](https://github.com/bluegroundltd)
+
+## API Evangelist rating
+
+**Kin Score 16.1** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 56.3 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 2.6 |
+| Developer ergonomics | 7.1 |
+| Access clarity | 44.7 |
+
+**Agent readiness 2.9** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | yes |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 13.7** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/blueground/](https://apis.io/providers/blueground/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Blueground: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/blueground/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
